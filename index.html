@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cricket Field Interactive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <h1>🏏 Cricket Field Interactive</h1>
+    <nav>
+      <a href="#quiz-section">Quiz</a>
+      <a href="#live-score-section">Live Scores</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Quiz Section -->
+    <section id="quiz-section" class="card">
+      <h2>Cricket Quiz</h2>
+      <div class="progress-bar">
+        <div id="progress"></div>
+      </div>
+      <p id="question" class="question"></p>
+      <div id="options" class="options"></div>
+      <p id="quiz-result"></p>
+      <p id="score"></p>
+      <button id="next-btn" onclick="nextQuestion()" style="display:none;">Next ➡️</button>
+    </section>
+
+    <!-- Live Score Section -->
+    <section id="live-score-section" class="card">
+      <h2>Live Cricket Scores</h2>
+      <button onclick="fetchLiveScore()">Show Matches</button>
+      <div id="scores" class="score-cards"></div>
+    </section>
+  </div>
+
+  <!-- Link JS -->
+  <script src="script.js"></script>
+</body>
+</html>

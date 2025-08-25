@@ -1,0 +1,137 @@
+/* Background with overlay */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: url('cricket-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  color: #fff;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: -1;
+}
+
+header {
+  background: linear-gradient(90deg, #0f9b0f, #0052cc);
+  padding: 20px;
+  text-align: center;
+  color: white;
+  border-bottom: 3px solid #ffcc00;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+nav {
+  margin-top: 10px;
+}
+nav a {
+  color: #ffcc00;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #fff;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Card style */
+.card {
+  background: rgba(255,255,255,0.95);
+  color: #333;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Quiz */
+.question {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.options button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background: #0077ff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.options button:hover {
+  background: #0052cc;
+  transform: scale(1.05);
+}
+
+/* Next button */
+#next-btn {
+  margin-top: 15px;
+  background: #ff5722;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+#next-btn:hover {
+  background: #e64a19;
+}
+
+/* Result text */
+#quiz-result {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Score progress */
+.progress-bar {
+  background: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px 0 20px;
+  height: 12px;
+}
+#progress {
+  background: linear-gradient(90deg, #00c853, #76ff03);
+  height: 100%;
+  width: 0%;
+}
+
+/* Live scores */
+.score-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+.score-cards div {
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  font-weight: bold;
+}
